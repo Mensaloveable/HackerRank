@@ -1,9 +1,5 @@
 package com.loveable.WarmupChallenges;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 /**
  * There is a string, s, of lowercase English letters that is repeated infinitely many times. Given an integer, n,
  * find and print the number of letter a's in the first n letters of the infinite string.
@@ -30,7 +26,7 @@ import java.util.List;
  * The first line contains a single string, s.
  * <p>
  * The second line contains an integer, n.
- * */
+ */
 
 public class RepeatedStrings {
     public static void main(String[] args) {
