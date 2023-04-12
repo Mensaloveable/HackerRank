@@ -31,8 +31,9 @@ package com.loveable.WarmupChallenges;
 public class RepeatedStrings {
     public static void main(String[] args) {
         String s = "aba";
+        String s1 = "cab";
         long freq1 = repeatedString(s, 100979879798L);
-        long freq2 = repeatedString1(s, 10000000000000000L);
+        long freq2 = repeatedString1(s1, 333333333L);
         System.out.println(freq1);
         System.out.println(freq2);
     }
