@@ -1,7 +1,12 @@
 package com.loveable.WarmupChallenges;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
- * There is a string, s, of lowercase English letters that is repeated infinitely many times. Given an integer, n, find and print the number of letter a's in the first n letters of the infinite string.
+ * There is a string, s, of lowercase English letters that is repeated infinitely many times. Given an integer, n,
+ * find and print the number of letter a's in the first n letters of the infinite string.
  * <p>
  * Example
  * s = 'abcac'
@@ -28,4 +33,40 @@ package com.loveable.WarmupChallenges;
  * */
 
 public class RepeatedStrings {
+    public static void main(String[] args) {
+        String s = "aba";
+        long freq1 = repeatedString(s, 100979879798L);
+        long freq2 = repeatedString1(s, 10000000000000000L);
+        System.out.println(freq1);
+        System.out.println(freq2);
+    }
+
+    public static long repeatedString(String s, long n) {
+        int len = s.length();
+        long numOfAsInS = 0;
+        for (int i = 0; i < len; i++) {
+            if (s.charAt(i) == 'a') {
+                numOfAsInS++;
+            }
+        }
+        long repeats = n / len;
+        long remainder = n % len;
+        long numOfAsInRemainder = 0;
+        for (int i = 0; i < remainder; i++) {
+            if (s.charAt(i) == 'a') {
+                numOfAsInRemainder++;
+            }
+        }
+        return numOfAsInS * repeats + numOfAsInRemainder;
+    }
+
+    public static long repeatedString1(String s, long n) {
+        long numOfAsInS = s.chars().filter(ch -> ch == 'a').count();
+        long repeats = n / s.length();
+        long remainder = n % s.length();
+        long numOfAsInRemainder = s.substring(0, (int) remainder)
+                .chars().filter(ch -> ch == 'a').count();
+        return numOfAsInS * repeats + numOfAsInRemainder;
+    }
+
 }
