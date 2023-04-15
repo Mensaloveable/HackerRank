@@ -77,5 +77,4 @@ public class TimeConversion {
         // Return the time in 24-hour format as a string
         return String.format("%02d:%02d:%02d", hour, minute, second);
     }
-
 }
