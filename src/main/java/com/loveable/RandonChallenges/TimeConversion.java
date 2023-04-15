@@ -1,4 +1,4 @@
-package com.loveable.RandonChallenge;
+package com.loveable.RandonChallenges;
 
 /**
  * Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.

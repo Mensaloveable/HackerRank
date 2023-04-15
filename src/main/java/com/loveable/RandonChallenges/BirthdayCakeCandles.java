@@ -1,4 +1,4 @@
-package com.loveable.RandonChallenge;
+package com.loveable.RandonChallenges;
 
 import java.util.ArrayList;
 import java.util.Arrays;
