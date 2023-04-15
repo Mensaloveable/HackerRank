@@ -1,4 +1,6 @@
 package com.loveable.WarmupChallenges;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -32,6 +34,16 @@ import java.util.List;
  */
 
 public class JumpingOnTheClouds {
+    public static void main(String[] args) {
+        List<Integer> clouds1 = new ArrayList<>(Arrays.asList(0,1,0,0,0,1,0));
+        List<Integer> clouds2 = new ArrayList<>(Arrays.asList(0,1,0,1,0,0,1,0));
+        List<Integer> clouds3 = new ArrayList<>(Arrays.asList(0,1,0,0,0,0,0,1,0));
+
+        System.out.println(jumpingOnClouds(clouds1));
+        System.out.println(jumpingOnClouds(clouds2));
+        System.out.println(jumpingOnClouds(clouds3));
+
+    }
     public static int jumpingOnClouds(List<Integer> c) {
         int jumps = 0;
         int i = 0;
@@ -47,4 +59,5 @@ public class JumpingOnTheClouds {
         }
         return jumps;
     }
+
 }
